@@ -4,6 +4,7 @@ function getDogImage() {
 const imgUrl = "https://dog.ceo/api/breeds/image/random/4";
 return fetch(imgUrl)
   .then(resp => resp.json())
+<<<<<<< HEAD
   .then(function(json) {renderDogImages(json)});
 }
 
@@ -63,4 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
     getDogImage();
     getDogBreeds();
     filterBreeds();
+=======
+  .then(json => console.log(json));
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    getDogImage();
+>>>>>>> c1069083c56910bbeecb38148758d3b10b8037f8
   });
